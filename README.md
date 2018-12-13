@@ -6,4 +6,4 @@ The longest common subsequence (LCS) problem has been around for quite sometime,
 
 ## Usage
 
-**LCS.hs** and **LCS.rs** are very easy to use
+**LCS.hs** and **LCS.rs** are very easy to use.  Both take two command line arguments: 
