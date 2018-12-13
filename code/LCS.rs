@@ -1,6 +1,6 @@
 /*Longest Common Subsequence: A Rust-Based Implementation.
 Author: Matthew Mosior
-Synposis: This Haskell script will two lexicographic sequences
+Synposis: This Rust program will take two lexicographic sequences
 and return the longest common subsequence between them
 along with the coordinates of each character
 in the LCS mapped back to each input string using

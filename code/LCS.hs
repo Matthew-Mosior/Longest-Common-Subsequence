@@ -1,6 +1,6 @@
 {-=Longest Common Subsequence: A Haskell-Based Implementation.=-}
 {-=Author: Matthew Mosior=-}
-{-=Synposis: This Haskell script will two lexicographic sequences=-}
+{-=Synposis: This Haskell script will take two lexicographic sequences=-}
 {-=and return the longest common subsequence between them=-} 
 {-=along with the coordinates of each character=-}
 {-=in the LCS mapped back to each input string using=-}
