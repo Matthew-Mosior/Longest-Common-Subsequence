@@ -1,2 +1,5 @@
-# Longest-Common-Subsequence
-A comparison between Haskell and Rust implementations of the longest common subsequence (LCS) problem.
+# Longest-Common-Subsequence: A comparison between Haskell and Rust implementations of the longest common subsequence (LCS) problem.
+
+## Introduction
+
+The longest common subsequence (LCS) problem has been around for quite sometime, and has seen interest from different fields, such as computer science and bioinformatics.  **LCS.hs** (written in Haskell) and **LCS.rs** (written in Rust) are two differing implementations of the longest common subsequence problem.  The recursive nature of **LCS.hs** and the iterative nature of **LCS.rs** demonstrate constrasting programming paradigms, while achieving the same result.
