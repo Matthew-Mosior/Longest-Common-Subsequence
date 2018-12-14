@@ -104,9 +104,28 @@ Similarly, **LCS.rs** will look like:
 _output_rust.txt_
 
 ```
+LCS:
 tsitest
-0 3 4 7 8 9 10
-0 2 4 10 11 12 13
+
+Coordinates of elements in "../Code/Examples/example1.txt":
+0 3 4 7 8 9 10 
+Coordinates of elements in "../Code/Examples/example2.txt":
+0 2 4 10 11 12 13 
+
+Dynamic programming grid:
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+0 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+0 1 1 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 
+0 1 1 2 2 3 3 3 3 3 3 3 3 3 3 4 4 4 4 
+0 1 1 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 
+0 1 1 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 
+0 1 1 2 3 3 3 3 3 3 3 4 4 4 5 5 5 5 5 
+0 1 2 2 3 3 3 3 3 3 3 4 5 5 5 5 5 5 5 
+0 1 2 3 3 3 3 3 3 3 3 4 5 6 6 6 6 6 6 
+0 1 2 3 4 4 4 4 4 4 4 4 5 6 7 7 7 7 7 
+0 1 2 3 4 4 4 4 4 4 4 4 5 6 7 7 7 7 8 
 ```
 
 These files can be found [here](https://github.com/Matthew-Mosior/Longest-Common-Subsequence/tree/master/examples) as well.
