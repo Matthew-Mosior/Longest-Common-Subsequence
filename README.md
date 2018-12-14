@@ -89,14 +89,17 @@ Given the input files above, **LCS.hs** output will look like:
 _output_haskell.txt_
 
 ```
-tsitest  
-'t' 0 0  
-'s' 3 2  
-'i' 4 4  
-'t' 7 10 
-'e' 8 11 
-'s' 9 12 
-'t' 10 13
+LCS:                    
+tsitest
+                
+Coordinates of elements:
+'t' 0 0                 
+'s' 3 2                 
+'i' 4 4                 
+'t' 7 10                
+'e' 8 11                
+'s' 9 12                
+'t' 10 13 
 ```
 
 Similarly, **LCS.rs** will look like:
