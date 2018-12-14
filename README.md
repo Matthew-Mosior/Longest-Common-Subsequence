@@ -13,13 +13,54 @@ Both **LCS.hs** and **LCS.rs** take two command line arguments:
 
 They both generate **output.txt** in the current directory.
 
-The following is an example usage of **LCS.hs**
+## Haskell Compilation
+
+To actually run **LCS.hs** and **LCS.rs**, they need to be compiled first.
+
+To compile **LCS.hs**, you will need a haskell compiler, such as GHC, which can be downloaded [here](https://www.haskell.org/downloads).
+
+Once you have GHC installed, make sure you have the libraries required by **LCS.hs** locally.  If not, use the following command to download them:
 
 ```
-$ ./LCS_haskell 
+$ cabal update
+$ cabal install [library-name]
 ```
 
-The **LCS_haskell** and **LCS_rust** executables can be found [here](https://github.com/Matthew-Mosior/Longest-Common-Subsequence/tree/master/bin), if you prefer not to compile the source code yourself.
+Then, to compile **LCS.hs** using GHC, use the following command:
+
+```
+$ ghc -o LCS_haskell LCS.hs
+```
+
+This command will output _LCS_haskell_.
+
+The following is an example usage of _LCS_haskell_:
+
+```
+$ ./LCS_haskell example1.txt example2.txt
+```
+
+## Rust Compilation
+
+To compile **LCS.rs**, you will need the rust compiler, rustc, which can be downloaded [here](https://www.rust-lang.org/learn/get-started).
+
+Then, to compile **LCS.rs** using rustc, use the following command:
+
+```
+$ rustc -o LCS_rust LCS.rs
+```
+
+This will output _LCS_rust_.
+
+The following is an example usage of _LCS_rust_:
+
+```
+$ ./LCS_rust example1.txt example2.txt
+```
+
+## Pre-compiled Binaries
+
+The _LCS_haskell_ and _LCS_rust_ binaries can be found [here](https://github.com/Matthew-Mosior/Longest-Common-Subsequence/tree/master/bin), if you prefer not to compile the source code yourself.
 
 ## Example
 
