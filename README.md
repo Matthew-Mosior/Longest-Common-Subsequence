@@ -13,6 +13,12 @@ Both **LCS.hs** and **LCS.rs** take two command line arguments:
 
 They both generate **output.txt** in the current directory.
 
+The first line of **output.txt** is the LCS of the two input sequences.
+
+The second line of **output.txt** is the mapping of each character of the LCS to its position (coordinate) in the input string originating from the first command line argument.
+
+The third line of **output.txt** is the mapping of each character of the LCS to its position (coordinate) in the input string originating from the second command line argument.
+
 ## Haskell Compilation
 
 To actually run **LCS.hs** and **LCS.rs**, they need to be compiled first.
@@ -104,3 +110,10 @@ tsitest
 ```
 
 These files can be found [here](https://github.com/Matthew-Mosior/Longest-Common-Subsequence/tree/master/examples) as well.
+
+## Credits
+
+Both the Haskell and Rust implementations were added December 2018.
+
+Author: [Matthew Mosior](https://github.com/Matthew-Mosior).
+
