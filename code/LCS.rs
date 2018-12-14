@@ -21,7 +21,7 @@ use std::io::prelude::*;
 //Functions.
 
 //Longest Common Subsequence Function.
-fn lcs(string1: String, string2: String) -> (String,Vec<usize>,Vec<usize>)
+fn lcs(string1: String, string2: String) -> (String,Vec<usize>,Vec<usize>,Vec<Vec<usize>>)
 {
     let total_rows = string1.len() + 1;
     let total_columns = string2.len() + 1; 
@@ -115,7 +115,7 @@ fn lcs(string1: String, string2: String) -> (String,Vec<usize>,Vec<usize>)
     }
 
     //Return the lcs, coordinatetable1, and coordinatetable2.
-    (String::from_utf8(lcs).unwrap(),coordinatetable1,coordinatetable2)
+    (String::from_utf8(lcs).unwrap(),coordinatetable1,coordinatetable2,dynamicprogrammingtable)
 }
 //////////////////////////////////////
 
@@ -148,34 +148,55 @@ fn main() -> std::io::Result<()>
             ////////////////////////////////////
 
             //Run the lcs function on contents1 and contents2.
-            let runlcs  = lcs(contents1,contents2);
-            let (a,b,c) = runlcs; 
+            let runlcs = lcs(contents1,contents2);
+            let (a,b,c,d) = runlcs; 
             //////////////////////////////////////////////////
     
             //Print the result of runlcs to output.txt.
             let mut output_buffer = File::create("output.txt")?;
             
             //Write the first element of runlcs to output.txt.
-            write!(output_buffer,"{}",a);
+            write!(output_buffer,"LCS:\n");
+            write!(output_buffer,"{}\n",a);
 
             //Write the second element of runlcs to output.txt.
+            write!(output_buffer,"Coordinates of elements in {:?}:\n",file1);
             for data in &b
             {
                 write!(output_buffer,"{} ",data);
             }
            
             //Insert a newline.
-            output_buffer.write_all(b"\n");
-            
+            write!(output_buffer,"\n");
+
             //Write the third element of runlcs to output.txt.
+            write!(output_buffer,"Coordinates of elements in {:?}:\n",file2);
             for data in &c
             {
                 write!(output_buffer,"{} ",data);
             }
 
-            //Insert a newline.
-            output_buffer.write_all(b"\n");
+            //Insert a couple of newlines.
+            write!(output_buffer,"\n");
+            write!(output_buffer,"\n");
             ///////////////////////////////////////////
+
+            //Print the 2D grid.
+            write!(output_buffer,"Dynamic programming grid:\n");
+            //For each row in dynamicprogrammingtable.
+            for row in &d
+            {
+                //For each column in dynamicprogrammingtable.
+                for column in row
+                {
+                    //Print the current element.
+                    write!(output_buffer,"{} ",column);
+                }
+
+                //Print a newline.
+                write!(output_buffer,"\n"); 
+            }
+            ////////////////////
         }
 
         //All other cases.
