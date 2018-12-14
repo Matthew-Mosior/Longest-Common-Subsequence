@@ -69,7 +69,7 @@ preprintlcs (x,y)  = (x,shower y)
 prefinalprintlcs :: (String,[(String,String,String)]) -> (String,[String])
 prefinalprintlcs ([],_) = ([],[])
 prefinalprintlcs (_,[]) = ([],[])
-prefinalprintlcs (x,y) = (x,concatenator y)
+prefinalprintlcs (x,y) = (x,["Coordinates of elements:"] ++ (concatenator y))
     where
         --Nested Function Definition.--
         --concatenator
@@ -81,7 +81,7 @@ prefinalprintlcs (x,y) = (x,concatenator y)
 --finalprintlcs
 finalprintlcs :: (String,[String]) -> [[String]]
 finalprintlcs ([],[]) = []
-finalprintlcs (x,y)   = map (\z -> [z]) (x : y)
+finalprintlcs (x,y)   = map (\z -> [z]) (["LCS:"] ++ ((x ++ "\n") : y))
 
 {---------------------------------------------------------------------}
 
