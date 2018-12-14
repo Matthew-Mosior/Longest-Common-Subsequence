@@ -13,11 +13,7 @@ Both **LCS.hs** and **LCS.rs** take two command line arguments:
 
 They both generate **output.txt** in the current directory.
 
-The first line of **output.txt** is the LCS of the two input sequences.
-
-The second line of **output.txt** is the mapping of each character of the LCS to its position (coordinate) in the input string originating from the first command line argument.
-
-The third line of **output.txt** is the mapping of each character of the LCS to its position (coordinate) in the input string originating from the second command line argument.
+The only difference between the two implementations is that the Haskell implementation utilizes recursion to calculate the LCS, so it won't capture information regarding the LCS edit graph (2D dynamic programming grid).
 
 ## Haskell Compilation
 
