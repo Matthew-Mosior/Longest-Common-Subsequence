@@ -133,5 +133,5 @@ These files can be found [here](https://github.com/Matthew-Mosior/Longest-Common
 
 Both the Haskell and Rust implementations were added December 2018.
 
-Author: [Matthew Mosior](https://github.com/Matthew-Mosior).
+Author: [Matthew Mosior](https://github.com/Matthew-Mosior)
 
