@@ -98,6 +98,10 @@ fn lcs(string1: String, string2: String) -> (String,Vec<usize>,Vec<usize>)
     coordinatetable1.reverse();
     coordinatetable2.reverse();
 
+    //Pop the last elements from coordinatetable1 and coordinatetable2.
+    coordinatetable1.pop();
+    coordinatetable2.pop();
+
     //Subtract 1 from each element of coordinatetable1 to make the answer zero-indexed.
     for element in coordinatetable1.iter_mut()
     { 
